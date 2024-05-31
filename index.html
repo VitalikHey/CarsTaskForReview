@@ -1,58 +1,76 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Cars</title>
-    <link href="style/style.css" rel="stylesheet">
-</head>
-<body style="background-color: ghostwhite">
-<header class="header header__position">
-    <span class="header__filter-option">
+    <link href="style/style.css" rel="stylesheet" />
+  </head>
+  <body style="background-color: ghostwhite">
+    <header class="header header__position">
+      <span class="header__filter-option">
         Цена
-        <span id="price" class="header__filter-option text-visible">от&nbsp;
-            <span id="minPriceHeader" class="minPrice"></span>
-            &nbsp;до&nbsp;
-            <span id="maxPriceHeader" class="maxPrice"></span>
-            <button id="closePrice" style="border: none; width: 10px;height: 10px">
-                <img
-                    src="./svgIcon/smallCrossForHeader.svg"
-                    alt="smallCrossForHeader"
-                >
-            </button>
+        <span id="price" class="header__filter-option text-visible"
+          >от&nbsp;
+          <span id="minPriceHeader" class="minPrice"></span>
+          &nbsp;до&nbsp;
+          <span id="maxPriceHeader" class="maxPrice"></span>
+          <button
+            id="closePrice"
+            style="border: none; width: 10px; height: 10px"
+          >
+            <img
+              src="./svgIcon/smallCrossForHeader.svg"
+              alt="smallCrossForHeader"
+            />
+          </button>
         </span>
-    </span>
-    <span class="header__filter-option header__type-car">
+      </span>
+      <span class="header__filter-option header__type-car">
         Тип транспорта &nbsp;
         <span id="type" class="header__filter-option text-visible">
-            <span id="typeCarHeader" class="typeCar">Любой</span>
-            <button id="closeType" class="header__filter-option close-button">
+          <span id="typeCarHeader" class="typeCar">Любой</span>
+          <button id="closeType" class="header__filter-option close-button">
             <img
-                    src="./svgIcon/smallCrossForHeader.svg"
-                    alt="smallCrossForHeader"
-            >
-        </button>
+              src="./svgIcon/smallCrossForHeader.svg"
+              alt="smallCrossForHeader"
+            />
+          </button>
         </span>
-    </span>
-    <span class="header__filter-option" style="width: 120px">
-        <button id="closeAll" class="button">
-            Очистить всё
-        </button>
-    </span>
-</header>
-<div style="display: flex">
-    <div>
-        <div id="filterButton" style="display: flex; flex-direction: column; width: 289px; margin-left: 100px"></div>
-        <div style="background-color: #FFFFFF; width: 289px; height: 84px; margin-left: 100px">
-            <button id="buttonAccept" class="button accept">
-                ПРИМЕНИТЬ
-            </button>
+      </span>
+      <span class="header__filter-option" style="width: 120px">
+        <button id="closeAll" class="button">Очистить всё</button>
+      </span>
+    </header>
+    <div style="display: flex">
+      <div>
+        <div
+          id="filterButton"
+          style="
+            display: flex;
+            flex-direction: column;
+            width: 289px;
+            margin-left: 100px;
+          "
+        ></div>
+        <div
+          style="
+            background-color: #ffffff;
+            width: 289px;
+            height: 84px;
+            margin-left: 100px;
+          "
+        >
+          <button id="buttonAccept" class="button accept">ПРИМЕНИТЬ</button>
         </div>
+      </div>
+      <div style="margin-left: 50px">
+        <div
+          id="listCards"
+          style="width: 900px; margin-left: -100px; margin-top: -30px"
+        ></div>
+      </div>
     </div>
-    <div style="margin-left: 50px">
-        <div id="listCards" style="width: 900px; margin-left: -100px; margin-top: -30px"></div>
-    </div>
-</div>
-<!--<script>var exports = {};</script>-->
-<script  src="components/cars.js"></script>
-</body>
+    <!--<script>var exports = {};</script>-->
+    <script src="components/cars.js"></script>
+  </body>
 </html>
