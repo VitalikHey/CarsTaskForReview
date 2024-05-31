@@ -1,3 +1,57 @@
+var Car = /** @class */ (function () {
+    function Car(country, manufacturer, model, price, type, transmission, year, photo, ad) {
+        this.country = country;
+        this.manufacturer = manufacturer;
+        this.model = model;
+        this.price = price;
+        this.type = type;
+        this.transmission = transmission;
+        this.year = year;
+        this.photo = photo;
+        this.ad = ad;
+    }
+    return Car;
+}());
+var K7 = new Car("\u042E\u0436\u043D\u0430\u044F \u041A\u043E\u0440\u0435\u044F" /* Country.SouthKorea */, "Kia" /* Manufacturer.Kia */, "K7" /* Model.K7 */, 2500016 /* Price.k7 */, "\u041B\u0435\u0433\u043A\u043E\u0432\u043E\u0439 \u0430\u0432\u0442\u043E\u043C\u043E\u0431\u0438\u043B\u044C" /* TypeCar.passengerCar */, "\u0410\u0432\u0442\u043E\u043C\u0430\u0442" /* Transmission.automatic */, "2020", "./photos/K7.jpg", "\u041F\u0440\u043E\u0434\u0430\u0436\u0430" /* Ad.Sell */);
+var Levorg = new Car("\u042F\u043F\u043E\u043D\u0438\u044F" /* Country.Japan */, "Subaru" /* Manufacturer.Subaru */, "Levorq" /* Model.Levorg */, 1225015 /* Price.Levorg */, "\u041B\u0435\u0433\u043A\u043E\u0432\u043E\u0439 \u0430\u0432\u0442\u043E\u043C\u043E\u0431\u0438\u043B\u044C" /* TypeCar.passengerCar */, "\u0412\u0430\u0440\u0438\u0430\u0442\u043E\u0440" /* Transmission.variate */, "2019", "./photos/levorg.jpg", "\u041F\u0440\u043E\u0434\u0430\u0436\u0430" /* Ad.Sell */);
+var AudiQ5 = new Car("\u0413\u0435\u0440\u043C\u0430\u043D\u0438\u044F" /* Country.Germany */, "Audi" /* Manufacturer.Audi */, "Q5 45 TFSI" /* Model.AudiQ5 */, 2400000 /* Price.AudiQ5 */, "\u0412\u043D\u0435\u0434\u043E\u0440\u043E\u0436\u043D\u0438\u043A" /* TypeCar.OffRoad */, "\u0420\u043E\u0431\u043E\u0442\u0438\u0437\u0438\u0440\u043E\u0432\u0430\u043D\u043D\u0430\u044F" /* Transmission.robot */, "2019", "./photos/AudiQ5.jpg", "\u041F\u0440\u043E\u0434\u0430\u0436\u0430" /* Ad.Sell */);
+var UAZ3151 = new Car("\u0420\u043E\u0441\u0441\u0438\u044F" /* Country.Russia */, "\u0423\u0410\u0417" /* Manufacturer.UAZ */, "3151" /* Model.UAZ3151 */, 300000 /* Price.UAZ3151 */, "\u0412\u043D\u0435\u0434\u043E\u0440\u043E\u0436\u043D\u0438\u043A" /* TypeCar.OffRoad */, "\u041C\u0435\u0445\u0430\u043D\u0438\u0447\u0435\u0441\u043A\u0430\u044F" /* Transmission.mechanic */, "2002", "./photos/UAZ3151.jpg", "\u041F\u0440\u043E\u0434\u0430\u0436\u0430" /* Ad.Sell */);
+var OpelCOMBOAircoElctRamenStuurbediening = new Car("\u041D\u0438\u0434\u0435\u0440\u043B\u0430\u043D\u0434\u044B" /* Country.Netherlands */, "Opel" /* Manufacturer.Opel */, "Opel COMBO" /* Model.OpelCOMBOAircoElctRamenStuurbediening */, 1500000 /* Price.OpelCOMBOAircoElctRamenStuurbediening */, "\u0413\u0440\u0443\u0437\u043E\u0432\u0438\u043A" /* TypeCar.truck */, "\u041C\u0435\u0445\u0430\u043D\u0438\u0447\u0435\u0441\u043A\u0430\u044F" /* Transmission.mechanic */, "2015", "./photos/OpelCOMBO.png", "\u041F\u0440\u043E\u0434\u0430\u0436\u0430" /* Ad.Sell */);
+var MercedesBenz250 = new Car("\u041D\u0438\u0434\u0435\u0440\u043B\u0430\u043D\u0434\u044B" /* Country.Netherlands */, "MercedesBenz" /* Manufacturer.MercedesBenz */, "Cobus2700s" /* Model.CobusMercedesBenz */, 4887000 /* Price.CobusMercedesBenz */, "\u0413\u0440\u0443\u0437\u043E\u0432\u0438\u043A" /* TypeCar.truck */, "\u0410\u0432\u0442\u043E\u043C\u0430\u0442" /* Transmission.automatic */, "2015", "./photos/Mercedes-Benz250.jpg", "\u041F\u0440\u043E\u0434\u0430\u0436\u0430" /* Ad.Sell */);
+var NissanEcoT100 = new Car("\u041D\u0438\u0434\u0435\u0440\u043B\u0430\u043D\u0434\u044B" /* Country.Netherlands */, "Nissan" /* Manufacturer.Nissan */, "EcoT100" /* Model.NissanEcoT100 */, 4887000 /* Price.NissanEcoT100 */, "\u0413\u0440\u0443\u0437\u043E\u0432\u0438\u043A" /* TypeCar.truck */, "\u041C\u0435\u0445\u0430\u043D\u0438\u0447\u0435\u0441\u043A\u0430\u044F" /* Transmission.mechanic */, "2015", "./photos/NissanEcoT100.png", "\u041F\u0440\u043E\u0434\u0430\u0436\u0430" /* Ad.Sell */);
+var CobusMercedesBenz = new Car("\u041D\u0438\u0434\u0435\u0440\u043B\u0430\u043D\u0434\u044B" /* Country.Netherlands */, "MercedesBenz" /* Manufacturer.MercedesBenz */, "Cobus2700s" /* Model.CobusMercedesBenz */, 4887000 /* Price.CobusMercedesBenz */, "\u0413\u0440\u0443\u0437\u043E\u0432\u0438\u043A" /* TypeCar.truck */, "\u041C\u0435\u0445\u0430\u043D\u0438\u0447\u0435\u0441\u043A\u0430\u044F" /* Transmission.mechanic */, "2015", "./photos/CobusMercedesBenz.jpg", "\u0410\u0443\u043A\u0446\u0438\u043E\u043D" /* Ad.Auction */);
+var Setra317ULGT = new Car("\u041D\u0438\u0434\u0435\u0440\u043B\u0430\u043D\u0434\u044B" /* Country.Netherlands */, "MercedesBenz" /* Manufacturer.MercedesBenz */, "317ULGT" /* Model.Setra317ULGT */, 279000 /* Price.Setra317ULGT */, "\u0413\u0440\u0443\u0437\u043E\u0432\u0438\u043A" /* TypeCar.truck */, "\u0410\u0432\u0442\u043E\u043C\u0430\u0442" /* Transmission.automatic */, "2015", "./photos/Setra317UL-GT.jpg", "\u0410\u0443\u043A\u0446\u0438\u043E\u043D" /* Ad.Auction */);
+var KiaK72020 = new Car("\u0420\u043E\u0441\u0441\u0438\u044F" /* Country.Russia */, "Kia" /* Manufacturer.Kia */, "K7" /* Model.KiaK72020 */, 2325200 /* Price.KiaK72020 */, "\u041B\u0435\u0433\u043A\u043E\u0432\u043E\u0439 \u0430\u0432\u0442\u043E\u043C\u043E\u0431\u0438\u043B\u044C" /* TypeCar.passengerCar */, "\u0410\u0432\u0442\u043E\u043C\u0430\u0442" /* Transmission.automatic */, "2020", "./photos/KiaK7.jpg", "\u041F\u0440\u043E\u0434\u0430\u0436\u0430" /* Ad.Sell */);
+var SuzukiJimny = new Car("\u0420\u043E\u0441\u0441\u0438\u044F" /* Country.Russia */, "Suzuki" /* Manufacturer.Suzuki */, "Jimny" /* Model.SuzukiJimny */, 1099000 /* Price.SuzukiJimny */, "\u041B\u0435\u0433\u043A\u043E\u0432\u043E\u0439 \u0430\u0432\u0442\u043E\u043C\u043E\u0431\u0438\u043B\u044C" /* TypeCar.passengerCar */, "\u0410\u0432\u0442\u043E\u043C\u0430\u0442" /* Transmission.automatic */, "2008", "./photos/SuzukiJimnyIII.jpg", "\u0410\u0443\u043A\u0446\u0438\u043E\u043D" /* Ad.Auction */);
+var KiaSpectra = new Car("\u0420\u043E\u0441\u0441\u0438\u044F" /* Country.Russia */, "Kia" /* Manufacturer.Kia */, "Spectra I" /* Model.KiaSpectra */, 300000 /* Price.KiaSpectra */, "\u041B\u0435\u0433\u043A\u043E\u0432\u043E\u0439 \u0430\u0432\u0442\u043E\u043C\u043E\u0431\u0438\u043B\u044C" /* TypeCar.passengerCar */, "\u0410\u0432\u0442\u043E\u043C\u0430\u0442" /* Transmission.automatic */, "2008", "./photos/KiaSpectra.jpg", "\u041F\u0440\u043E\u0434\u0430\u0436\u0430" /* Ad.Sell */);
+var FordFocusII = new Car("\u0420\u043E\u0441\u0441\u0438\u044F" /* Country.Russia */, "Ford" /* Manufacturer.Ford */, "Focus II" /* Model.FordFocusII */, 535000 /* Price.FordFocusII */, "\u041B\u0435\u0433\u043A\u043E\u0432\u043E\u0439 \u0430\u0432\u0442\u043E\u043C\u043E\u0431\u0438\u043B\u044C" /* TypeCar.passengerCar */, "\u041C\u0435\u0445\u0430\u043D\u0438\u0447\u0435\u0441\u043A\u0430\u044F" /* Transmission.mechanic */, "2008", "./photos/FordFocusII.jpg", "\u0410\u0443\u043A\u0446\u0438\u043E\u043D" /* Ad.Auction */);
+var Lada2114 = new Car("\u0420\u043E\u0441\u0441\u0438\u044F" /* Country.Russia */, "Lada" /* Manufacturer.Lada */, "\u041B\u0435\u0433\u043A\u043E\u0432\u043E\u0439 \u0430\u0432\u0442\u043E\u043C\u043E\u0431\u0438\u043B\u044C" /* Model.Lada2114 */, 90000 /* Price.Lada2114 */, "\u041B\u0435\u0433\u043A\u043E\u0432\u043E\u0439 \u0430\u0432\u0442\u043E\u043C\u043E\u0431\u0438\u043B\u044C" /* TypeCar.passengerCar */, "\u041C\u0435\u0445\u0430\u043D\u0438\u0447\u0435\u0441\u043A\u0430\u044F" /* Transmission.mechanic */, "2001", "./photos/Lada2114.jpg", "\u041F\u0440\u043E\u0434\u0430\u0436\u0430" /* Ad.Sell */);
+var Uaz3151 = new Car("\u0420\u043E\u0441\u0441\u0438\u044F" /* Country.Russia */, "\u0423\u0410\u0417" /* Manufacturer.UAZ */, "3151" /* Model.UAZ3151 */, 300000 /* Price.UAZ3151 */, "\u0412\u043D\u0435\u0434\u043E\u0440\u043E\u0436\u043D\u0438\u043A" /* TypeCar.OffRoad */, "\u041C\u0435\u0445\u0430\u043D\u0438\u0447\u0435\u0441\u043A\u0430\u044F" /* Transmission.mechanic */, "1992", "./photos/3151.jpg", "\u041F\u0440\u043E\u0434\u0430\u0436\u0430" /* Ad.Sell */);
+var LandRoverDiscovery = new Car("\u0420\u043E\u0441\u0441\u0438\u044F" /* Country.Russia */, "Discovery" /* Manufacturer.Discovery */, "Discovery" /* Model.LandRoverDiscovery */, 275000 /* Price.LandRoverDiscovery */, "\u0412\u043D\u0435\u0434\u043E\u0440\u043E\u0436\u043D\u0438\u043A" /* TypeCar.OffRoad */, "\u0410\u0432\u0442\u043E\u043C\u0430\u0442" /* Transmission.automatic */, "2014", "./photos/LandRover.jpg", "\u041F\u0440\u043E\u0434\u0430\u0436\u0430" /* Ad.Sell */);
+var RenaultRoverLogan = new Car("\u0420\u043E\u0441\u0441\u0438\u044F" /* Country.Russia */, "Renault" /* Manufacturer.Renault */, "Logan I" /* Model.RenaultRoverLogan */, 2699000 /* Price.RenaultRoverLogan */, "\u041B\u0435\u0433\u043A\u043E\u0432\u043E\u0439 \u0430\u0432\u0442\u043E\u043C\u043E\u0431\u0438\u043B\u044C" /* TypeCar.passengerCar */, "\u041C\u0435\u0445\u0430\u043D\u0438\u0447\u0435\u0441\u043A\u0430\u044F" /* Transmission.mechanic */, "2011", "./photos/RenaultLogan.jpg", "\u0410\u0443\u043A\u0446\u0438\u043E\u043D" /* Ad.Auction */);
+var VolvoXC60 = new Car("\u0420\u043E\u0441\u0441\u0438\u044F" /* Country.Russia */, "Volvo" /* Manufacturer.Volvo */, "XC60" /* Model.VolvoXC60 */, 470000 /* Price.VolvoXC60 */, "\u0412\u043D\u0435\u0434\u043E\u0440\u043E\u0436\u043D\u0438\u043A" /* TypeCar.OffRoad */, "\u0410\u0432\u0442\u043E\u043C\u0430\u0442" /* Transmission.automatic */, "2010", "./photos/VolvoXC60.jpg", "\u041F\u0440\u043E\u0434\u0430\u0436\u0430" /* Ad.Sell */);
+var ChevroletAveo = new Car("\u0420\u043E\u0441\u0441\u0438\u044F" /* Country.Russia */, "Chevrolet" /* Manufacturer.Chevrolet */, "Aveo" /* Model.ChevroletAveo */, 1260000 /* Price.ChevroletAveo */, "\u041B\u0435\u0433\u043A\u043E\u0432\u043E\u0439 \u0430\u0432\u0442\u043E\u043C\u043E\u0431\u0438\u043B\u044C" /* TypeCar.passengerCar */, "\u041C\u0435\u0445\u0430\u043D\u0438\u0447\u0435\u0441\u043A\u0430\u044F" /* Transmission.mechanic */, "2008", "./photos/ChevroletAveo.jpg", "\u041F\u0440\u043E\u0434\u0430\u0436\u0430" /* Ad.Sell */);
+var arrayCars = [
+    ChevroletAveo,
+    VolvoXC60,
+    RenaultRoverLogan,
+    LandRoverDiscovery,
+    Uaz3151, Lada2114,
+    FordFocusII,
+    KiaSpectra,
+    SuzukiJimny,
+    KiaK72020,
+    Setra317ULGT,
+    CobusMercedesBenz,
+    NissanEcoT100,
+    K7,
+    Levorg,
+    AudiQ5,
+    UAZ3151,
+    OpelCOMBOAircoElctRamenStuurbediening,
+    MercedesBenz250
+];
+// Пока что, типо тут заканчивается файл с константами
 var SourceForFilterOption = /** @class */ (function () {
     function SourceForFilterOption() {
     }
@@ -94,73 +148,83 @@ var Filter = /** @class */ (function () {
     Filter.prototype.closePrice = function () {
         var minPriceInput = document.getElementById("minPriceValue");
         var maxPriceInput = document.getElementById("maxPriceValue");
-        if (minPriceInput && maxPriceInput) {
-            minPriceInput.value = String(SourceFilterOptions.minPrice(arrayCars));
-            maxPriceInput.value = String(SourceFilterOptions.maxPrice(arrayCars));
-        }
-        var minPriceHeader = document.getElementById("minPriceHeader");
-        var maxPriceHeader = document.getElementById("maxPriceHeader");
-        if (minPriceHeader && maxPriceHeader) {
-            minPriceHeader.textContent = String(SourceFilterOptions.minPrice(arrayCars));
-            maxPriceHeader.textContent = String(SourceFilterOptions.maxPrice(arrayCars));
+        if (minPriceInput instanceof HTMLInputElement && maxPriceInput instanceof HTMLInputElement) {
+            if (minPriceInput && maxPriceInput) {
+                minPriceInput.value = String(SourceFilterOptions.minPrice(arrayCars));
+                maxPriceInput.value = String(SourceFilterOptions.maxPrice(arrayCars));
+            }
+            var minPriceHeader_1 = document.getElementById("minPriceHeader");
+            var maxPriceHeader_1 = document.getElementById("maxPriceHeader");
+            if (minPriceHeader_1 && maxPriceHeader_1) {
+                minPriceHeader_1.textContent = String(SourceFilterOptions.minPrice(arrayCars));
+                maxPriceHeader_1.textContent = String(SourceFilterOptions.maxPrice(arrayCars));
+            }
         }
     };
     Filter.prototype.closeType = function () {
         var typeHeader = document.getElementById("typeCarHeader");
         typeHeader.textContent = "Любой";
         var typeInput = document.getElementById("typeInput");
-        typeInput.value = "Любой";
+        if (typeInput instanceof HTMLInputElement) {
+            typeInput.value = "Любой";
+        }
     };
     Filter.prototype.filterValues = function () {
         var maxPriceInput = document.getElementById("maxPriceValue");
-        var maxPriceValue = Number(maxPriceInput.value);
         var minPriceInput = document.getElementById("minPriceValue");
-        var minPriceValue = Number(minPriceInput.value);
         var typeInput = document.getElementById("typeInput");
-        var typeValue = String(typeInput.value);
-        var manufactures = Array.from(document.querySelectorAll('input[name="manufacture"]:checked')).map(function (checkbox) { return checkbox.value; });
         var countryInput = document.getElementById("countryInput");
-        var countryValue = String(countryInput.value);
-        var transmissions = Array.from(document.querySelectorAll('input[name="transmission"]:checked')).map(function (checkbox) { return checkbox.value; });
-        var ads = Array.from(document.querySelectorAll('input[name="ad"]:checked')).map(function (checkbox) { return checkbox.value; });
-        if (maxPriceValue === 0) {
-            maxPriceValue = SourceFilterOptions.maxPrice(arrayCars);
+        if (maxPriceInput instanceof HTMLInputElement &&
+            minPriceInput instanceof HTMLInputElement &&
+            typeInput instanceof HTMLInputElement &&
+            countryInput instanceof HTMLInputElement) {
+            var maxPriceValue_1 = Number(maxPriceInput.value);
+            var minPriceValue_1 = Number(minPriceInput.value);
+            var typeValue_1 = String(typeInput.value);
+            var countryValue_1 = countryInput.value;
+            var manufactures_1 = Array.from(document.querySelectorAll('input[name="manufacture"]:checked')).map(function (checkbox) { return checkbox.value; });
+            var transmissions_1 = Array.from(document.querySelectorAll('input[name="transmission"]:checked')).map(function (checkbox) { return checkbox.value; });
+            var ads_1 = Array.from(document.querySelectorAll('input[name="ad"]:checked')).map(function (checkbox) { return checkbox.value; });
+            if (!maxPriceValue_1) {
+                maxPriceValue_1 = SourceFilterOptions.maxPrice(arrayCars);
+            }
+            if (!minPriceValue_1) {
+                minPriceValue_1 = SourceFilterOptions.minPrice(arrayCars);
+            }
+            if (!typeValue_1 || typeValue_1 === "Любой") {
+                typeValue_1 = "";
+            }
+            if (!countryValue_1) {
+                countryValue_1 = "";
+            }
+            var filteredCars = arrayCars.filter(function (car) {
+                return (((car.price <= maxPriceValue_1 && car.price >= minPriceValue_1) || !(maxPriceValue_1 + minPriceValue_1)) &&
+                    (!typeValue_1 || car.type === typeValue_1) &&
+                    (!manufactures_1.length || manufactures_1.includes(car.manufacturer)) &&
+                    (!countryValue_1 || car.country === countryValue_1) &&
+                    (!transmissions_1.length || transmissions_1.includes(car.transmission)) &&
+                    (!ads_1.length || ads_1.includes(car.ad)));
+            });
+            var minPriceHeader_2 = document.getElementById("minPriceHeader");
+            minPriceHeader_2.textContent = String(minPriceValue_1);
+            var maxPriceHeader_2 = document.getElementById("maxPriceHeader");
+            maxPriceHeader_2.textContent = String(maxPriceValue_1);
+            document.getElementById("price").style.display = "inline";
+            var typeCarHeader = document.getElementById("typeCarHeader");
+            typeCarHeader.textContent = String(typeValue_1);
+            document.getElementById("type").style.display = "inline";
+            SourceCards.render(filteredCars);
         }
-        if (minPriceValue === 0) {
-            minPriceValue = SourceFilterOptions.minPrice(arrayCars);
-        }
-        if (typeValue == null || typeValue === "Любой") {
-            typeValue = "";
-        }
-        if (countryValue == null) {
-            countryValue = "";
-        }
-        var filteredCars = arrayCars.filter(function (car) {
-            return (((car.price <= maxPriceValue && car.price >= minPriceValue) || (maxPriceValue + minPriceValue === 0)) &&
-                (typeValue === "" || car.type === typeValue) &&
-                (manufactures.length === 0 || manufactures.includes(car.manufacturer)) &&
-                (countryValue === "" || car.country === countryValue) &&
-                (transmissions.length === 0 || transmissions.includes(car.transmission)) &&
-                (ads.length === 0 || ads.includes(car.ad)));
-        });
-        var minPriceHeader = document.getElementById("minPriceHeader");
-        minPriceHeader.textContent = String(minPriceValue);
-        var maxPriceHeader = document.getElementById("maxPriceHeader");
-        maxPriceHeader.textContent = String(maxPriceValue);
-        document.getElementById("price").style.display = "inline";
-        var typeCarHeader = document.getElementById("typeCarHeader");
-        typeCarHeader.textContent = String(typeValue);
-        document.getElementById("type").style.display = "inline";
-        SourceCards.render(filteredCars);
     };
     return Filter;
 }());
+// А тут заканчивается файл filter
 var CardsList = /** @class */ (function () {
     function CardsList() {
     }
     CardsList.prototype.renderFilter = function (arrayNameFilterOption) {
         var htmListFilter = "";
-        arrayNameFilterOption.forEach(function (nameButton) {
+        arrayNameFilterOption.map(function (nameButton) {
             // Поменять плюс в иконке на тернарный оператор!
             htmListFilter += "\n                <button \n                    id=\"open".concat(nameButton, "Button\" \n                    name=\"0\" \n                    class=\"button filter\" \n                    onclick=\"SourceCards.handleClickFilterButton('").concat(nameButton, "')\"\n                >\n                <img \n                    src=\"../svgIcon/plusForAutoFilter.svg\" \n                    alt=\"imgPlusFilterButton\"\n                >\n                    ").concat(nameButton, "\n                </button>   \n                <div id=\"").concat(nameButton, "Open\" style=\"width: 289px; background-color: #FFFFFF\"></div>\n            ");
         });
@@ -174,19 +238,19 @@ var CardsList = /** @class */ (function () {
         }
         if (nameButton === arrayNameFilterButton[1]) {
             // Добавить оставшиеся опции в datalist
-            htmlPlaceUnderButton = "\n                <span id=\"typeOpen\" class=\"type-visible\">\n                    <input \n                        type=\"text\"\n                        list=\"typeCar\"\n                        id=\"typeInput\"\n                        class=\"type-input\"\n                    >\n                    <datalist id=\"typeCar\">\n                        <option value=\"\u0412\u043D\u0435\u0434\u043E\u0440\u043E\u0436\u043D\u0438\u043A\">\n                        <option value=\"\u041B\u0435\u0433\u043A\u043E\u0432\u043E\u0439 \u0430\u0432\u0442\u043E\u043C\u043E\u0431\u0438\u043B\u044C\">\n                        <option value=\"\u0413\u0440\u0443\u0437\u043E\u0432\u0438\u043A\">\n                        <option value=\"\u041C\u0438\u043D\u0438\u0432\u044D\u043D\">\n                    </datalist>\n                    <button onclick=\"SourceFilter.isOpenedTypeFilter()\" class=\"button-close-filter-option\">\n                </span>\n            ";
+            htmlPlaceUnderButton = "\n                <span id=\"typeOpen\" class=\"type-visible\">\n                    <input \n                        type=\"text\"\n                        list=\"typeCar\"\n                        id=\"typeInput\"\n                        class=\"type-input\"\n                    >\n                    <datalist id=\"typeCar\">\n                        <option value=\"".concat("\u0412\u043D\u0435\u0434\u043E\u0440\u043E\u0436\u043D\u0438\u043A" /* TypeCar.OffRoad */, "\">\n                        <option value=\"").concat("\u041B\u0435\u0433\u043A\u043E\u0432\u043E\u0439 \u0430\u0432\u0442\u043E\u043C\u043E\u0431\u0438\u043B\u044C" /* TypeCar.passengerCar */, "\">\n                        <option value=\"").concat("\u0413\u0440\u0443\u0437\u043E\u0432\u0438\u043A" /* TypeCar.truck */, "\">\n                        <option value=\"").concat("\u041C\u0438\u043D\u0438\u0432\u044D\u043D" /* TypeCar.minivan */, "\">\n                    </datalist>\n                    <button onclick=\"SourceFilter.isOpenedTypeFilter()\" class=\"button-close-filter-option\">\n                </span>\n            ");
         }
         if (nameButton === arrayNameFilterButton[2]) {
-            htmlPlaceUnderButton = "\n                <span class=\"manufacturer-visible\" id=\"openManufacturer\">\n                    <span>\n                        <input\n                            name=\"manufacture\"\n                            type=\"checkbox\"\n                            id=\"kia\"\n                            value=\"Kia\"\n                            class=\"ad-input\"\n                        >\n                        <label class=\"label-manufacturer\" for=\"kia\">Kia-Rio</label>\n                    </span>\n                    <span>\n                        <input\n                            name=\"manufacture\"\n                            type=\"checkbox\"\n                            id=\"UAZ\"\n                            value=\"\u0423\u0410\u0417\"\n                            class=\"ad-input\"\n                        >\n                    <label class=\"label-manufacturer\" for=\"UAZ\">\u0423\u0410\u0417</label>\n                    </span>\n                    <span>\n                        <input\n                            name=\"manufacture\"\n                            type=\"checkbox\"\n                            id=\"Chevrolet\"\n                            value=\"Chevrolet\"\n                            class=\"ad-input\"\n                        >\n                    <label class=\"label-manufacturer\" for=\"Chevrolet\">Chevrolet</label>\n                    </span>\n                    <span>\n                        <input\n                            name=\"manufacture\"\n                            type=\"checkbox\"\n                            id=\"Volvo\"\n                            value=\"Volvo\"\n                            class=\"ad-input\"\n                        >\n                    <label class=\"label-manufacturer\" for=\"Volvo\">Volvo</label>\n                    </span>\n                    <span>\n                        <input\n                            name=\"manufacture\"\n                            type=\"checkbox\"\n                            id=\"Renault\"\n                            value=\"Renault\"\n                            class=\"ad-input\"\n                        >\n                    <label class=\"label-manufacturer\" for=\"Renault\">Renault</label>\n                    </span>\n                    <span>\n                        <input\n                            name=\"manufacture\"\n                            type=\"checkbox\"\n                            id=\"Discovery\"\n                            value=\"Discovery\"\n                            class=\"ad-input\"\n                        >\n                    <label class=\"label-manufacturer\" for=\"Discovery\">Discovery</label>\n                    </span>\n                    <span>\n                        <input\n                            name=\"manufacture\"\n                            type=\"checkbox\"\n                            id=\"Lada\"\n                            value=\"Lada\"\n                            class=\"ad-input\"\n                        >\n                    <label class=\"label-manufacturer\" for=\"Lada\">Lada</label>\n                    </span>\n                    <span>\n                        <input\n                            name=\"manufacture\"\n                            type=\"checkbox\"\n                            id=\"Ford\"\n                            value=\"Ford\"\n                            class=\"ad-input\"\n                        >\n                    <label class=\"label-manufacturer\" for=\"Ford\">Ford</label>\n                    </span>\n                    <span>\n                        <input\n                            name=\"manufacture\"\n                            type=\"checkbox\"\n                            id=\"Suzuki\"\n                            value=\"Suzuki\"\n                            class=\"ad-input\"\n                        >\n                    <label class=\"label-manufacturer\" for=\"Suzuki\">Suzuki</label>\n                    </span>\n                    <span>\n                        <input\n                            name=\"manufacture\"\n                            type=\"checkbox\"\n                            id=\"MercedesBenz\"\n                            value=\"MercedesBenz\"\n                            class=\"ad-input\"\n                        >\n                    <label class=\"label-manufacturer\" for=\"MercedesBenz\">MercedesBenz</label>\n                    </span>\n                    <button onclick=\"SourceFilter.isOpenManufacturerFilter()\" class=\"button-close-filter-option\" style=\"margin-left: 80px\">\n                    </span>\n            ";
+            htmlPlaceUnderButton = "\n                <span class=\"manufacturer-visible\" id=\"openManufacturer\">\n                    <span>\n                        <input\n                            name=\"manufacture\"\n                            type=\"checkbox\"\n                            id=\"kia\"\n                            value=\"".concat("Kia" /* Manufacturer.Kia */, "\"\n                            class=\"ad-input\"\n                        >\n                        <label class=\"label-manufacturer\" for=\"kia\">Kia-Rio</label>\n                    </span>\n                    <span>\n                        <input\n                            name=\"manufacture\"\n                            type=\"checkbox\"\n                            id=\"UAZ\"\n                            value=\"").concat("\u0423\u0410\u0417" /* Manufacturer.UAZ */, "\"\n                            class=\"ad-input\"\n                        >\n                    <label class=\"label-manufacturer\" for=\"UAZ\">\u0423\u0410\u0417</label>\n                    </span>\n                    <span>\n                        <input\n                            name=\"manufacture\"\n                            type=\"checkbox\"\n                            id=\"Chevrolet\"\n                            value=\"").concat("Chevrolet" /* Manufacturer.Chevrolet */, "\"\n                            class=\"ad-input\"\n                        >\n                    <label class=\"label-manufacturer\" for=\"Chevrolet\">Chevrolet</label>\n                    </span>\n                    <span>\n                        <input\n                            name=\"manufacture\"\n                            type=\"checkbox\"\n                            id=\"Volvo\"\n                            value=\"").concat("Volvo" /* Manufacturer.Volvo */, "\"\n                            class=\"ad-input\"\n                        >\n                    <label class=\"label-manufacturer\" for=\"Volvo\">Volvo</label>\n                    </span>\n                    <span>\n                        <input\n                            name=\"manufacture\"\n                            type=\"checkbox\"\n                            id=\"Renault\"\n                            value=\"").concat("Renault" /* Manufacturer.Renault */, "\"\n                            class=\"ad-input\"\n                        >\n                    <label class=\"label-manufacturer\" for=\"Renault\">Renault</label>\n                    </span>\n                    <span>\n                        <input\n                            name=\"manufacture\"\n                            type=\"checkbox\"\n                            id=\"Discovery\"\n                            value=\"").concat("Discovery" /* Manufacturer.Discovery */, "\"\n                            class=\"ad-input\"\n                        >\n                    <label class=\"label-manufacturer\" for=\"Discovery\">Discovery</label>\n                    </span>\n                    <span>\n                        <input\n                            name=\"manufacture\"\n                            type=\"checkbox\"\n                            id=\"Lada\"\n                            value=\"").concat("Lada" /* Manufacturer.Lada */, "\"\n                            class=\"ad-input\"\n                        >\n                    <label class=\"label-manufacturer\" for=\"Lada\">Lada</label>\n                    </span>\n                    <span>\n                        <input\n                            name=\"manufacture\"\n                            type=\"checkbox\"\n                            id=\"Ford\"\n                            value=\"").concat("Lada" /* Manufacturer.Lada */, "\"\n                            class=\"ad-input\"\n                        >\n                    <label class=\"label-manufacturer\" for=\"Ford\">Ford</label>\n                    </span>\n                    <span>\n                        <input\n                            name=\"manufacture\"\n                            type=\"checkbox\"\n                            id=\"Suzuki\"\n                            value=\"Suzuki\"\n                            class=\"ad-input\"\n                        >\n                    <label class=\"label-manufacturer\" for=\"Suzuki\">Suzuki</label>\n                    </span>\n                    <span>\n                        <input\n                            name=\"manufacture\"\n                            type=\"checkbox\"\n                            id=\"MercedesBenz\"\n                            value=\"").concat("MercedesBenz" /* Manufacturer.MercedesBenz */, "\"\n                            class=\"ad-input\"\n                        >\n                    <label class=\"label-manufacturer\" for=\"MercedesBenz\">MercedesBenz</label>\n                    </span>\n                    <button onclick=\"SourceFilter.isOpenManufacturerFilter()\" class=\"button-close-filter-option\" style=\"margin-left: 80px\">\n                    </span>\n            ");
         }
         if (nameButton === arrayNameFilterButton[3]) {
-            htmlPlaceUnderButton = "\n                <span id=\"countryOpen\" class=\"type-visible\">\n                    <input list=\"countryCar\"\n                        id=\"countryInput\"\n                        class=\"type-input\"\n                    >\n                    <datalist id=\"countryCar\">\n                        <option value=\"\u0420\u043E\u0441\u0441\u0438\u044F\">\n                        <option value=\"\u042F\u043F\u043E\u043D\u0438\u044F\">\n                        <option value=\"\u041A\u0438\u0442\u0430\u0439\">\n                        <option value=\"\u042E\u0436\u043D\u0430\u044F \u041A\u043E\u0440\u0435\u044F\">\n                        <option value=\"\u0413\u0435\u0440\u043C\u0430\u043D\u0438\u044F\">\n                        <option value=\"\u041D\u0438\u0434\u0435\u0440\u043B\u0430\u043D\u0434\u044B\">\n                    </datalist>\n                    <button onclick=\"SourceFilter.isOpenedCountryFilter()\" class=\"button-close-filter-option\">\n                </span>\n            ";
+            htmlPlaceUnderButton = "\n                <span id=\"countryOpen\" class=\"type-visible\">\n                    <input list=\"countryCar\"\n                        id=\"countryInput\"\n                        class=\"type-input\"\n                    >\n                    <datalist id=\"countryCar\">\n                        <option value=\"".concat("\u0420\u043E\u0441\u0441\u0438\u044F" /* Country.Russia */, "\">\n                        <option value=\"").concat("\u042F\u043F\u043E\u043D\u0438\u044F" /* Country.Japan */, "\">\n                        <option value=\"").concat("\u042E\u0436\u043D\u0430\u044F \u041A\u043E\u0440\u0435\u044F" /* Country.SouthKorea */, "\">\n                        <option value=\"").concat("\u0413\u0435\u0440\u043C\u0430\u043D\u0438\u044F" /* Country.Germany */, "\">\n                        <option value=\"").concat("\u041D\u0438\u0434\u0435\u0440\u043B\u0430\u043D\u0434\u044B" /* Country.Netherlands */, "\">\n                    </datalist>\n                    <button onclick=\"SourceFilter.isOpenedCountryFilter()\" class=\"button-close-filter-option\">\n                </span>\n            ");
         }
         if (nameButton === arrayNameFilterButton[4]) {
-            htmlPlaceUnderButton = "\n                <span id=\"transmissionOpen\" class=\"transmission-visible\">\n                    <span>\n                        <input\n                            name=\"transmission\"\n                            type=\"checkbox\"\n                            id=\"Mechanic\"\n                            value=\"\u041C\u0435\u0445\u0430\u043D\u0438\u0447\u0435\u0441\u043A\u0430\u044F\"\n                            class=\"transmission-input\"\n                        />\n                        <label for=\"Mechanic\"><span class=\"label-ad\">\u041C\u0435\u0445\u0430\u043D\u0438\u0447\u0435\u0441\u043A\u0430\u044F</span></label>\n                    </span>\n                    <span>\n                        <input\n                            name=\"transmission\"\n                            type=\"checkbox\"\n                            id=\"Machine\"\n                            value=\"\u0410\u0432\u0442\u043E\u043C\u0430\u0442\"\n                            class=\"transmission-input\"\n                        />\n                        <label for=\"Machine\"><span class=\"label-ad\">\u0410\u0432\u0442\u043E\u043C\u0430\u0442</span></label>\n                    </span>\n                    <span>\n                        <input\n                            name=\"transmission\"\n                            type=\"checkbox\"\n                            id=\"Machine\"\n                            value=\"\u0412\u0430\u0440\u0438\u0430\u0442\u043E\u0440\"\n                            class=\"transmission-input\"\n                        />\n                        <label for=\"Machine\"><span class=\"label-ad\">\u0412\u0430\u0440\u0438\u0430\u0442\u043E\u0440</span></label>\n                    </span>\n                    <span>\n                        <input\n                            name=\"transmission\"\n                            type=\"checkbox\"\n                            id=\"Machine\"\n                            value=\"\u0420\u043E\u0431\u043E\u0442\u0438\u0437\u0438\u0440\u043E\u0432\u0430\u043D\u043D\u0430\u044F\"\n                            class=\"transmission-input\"\n                        />\n                        <label for=\"Machine\"><span class=\"label-ad\">\u0420\u043E\u0431\u043E\u0442\u0438\u0437\u0438\u0440\u043E\u0432\u0430\u043D\u043D\u0430\u044F</span></label>\n                    </span>\n                    <button onclick=\"SourceFilter.isOpenedTransmissionFilter()\" class=\"button-close-filter-option\" style=\"margin-left: 80px\">\n                </span>\n                \n            ";
+            htmlPlaceUnderButton = "\n                <span id=\"transmissionOpen\" class=\"transmission-visible\">\n                    <span>\n                        <input\n                            name=\"transmission\"\n                            type=\"checkbox\"\n                            id=\"Mechanic\"\n                            value=\"".concat("\u041C\u0435\u0445\u0430\u043D\u0438\u0447\u0435\u0441\u043A\u0430\u044F" /* Transmission.mechanic */, "\"\n                            class=\"transmission-input\"\n                        />\n                        <label for=\"Mechanic\"><span class=\"label-ad\">\u041C\u0435\u0445\u0430\u043D\u0438\u0447\u0435\u0441\u043A\u0430\u044F</span></label>\n                    </span>\n                    <span>\n                        <input\n                            name=\"transmission\"\n                            type=\"checkbox\"\n                            id=\"Machine\"\n                            value=\"").concat("\u0410\u0432\u0442\u043E\u043C\u0430\u0442" /* Transmission.automatic */, "\"\n                            class=\"transmission-input\"\n                        />\n                        <label for=\"Machine\"><span class=\"label-ad\">\u0410\u0432\u0442\u043E\u043C\u0430\u0442</span></label>\n                    </span>\n                    <span>\n                        <input\n                            name=\"transmission\"\n                            type=\"checkbox\"\n                            id=\"Machine\"\n                            value=\"").concat("\u0412\u0430\u0440\u0438\u0430\u0442\u043E\u0440" /* Transmission.variate */, "\"\n                            class=\"transmission-input\"\n                        />\n                        <label for=\"Machine\"><span class=\"label-ad\">\u0412\u0430\u0440\u0438\u0430\u0442\u043E\u0440</span></label>\n                    </span>\n                    <span>\n                        <input\n                            name=\"transmission\"\n                            type=\"checkbox\"\n                            id=\"Machine\"\n                            value=\"").concat("\u0420\u043E\u0431\u043E\u0442\u0438\u0437\u0438\u0440\u043E\u0432\u0430\u043D\u043D\u0430\u044F" /* Transmission.robot */, "\"\n                            class=\"transmission-input\"\n                        />\n                        <label for=\"Machine\"><span class=\"label-ad\">\u0420\u043E\u0431\u043E\u0442\u0438\u0437\u0438\u0440\u043E\u0432\u0430\u043D\u043D\u0430\u044F</span></label>\n                    </span>\n                    <button onclick=\"SourceFilter.isOpenedTransmissionFilter()\" class=\"button-close-filter-option\" style=\"margin-left: 80px\">\n                </span>\n                \n            ");
         }
         if (nameButton === arrayNameFilterButton[5]) {
-            htmlPlaceUnderButton = "\n                <span id=\"adOpen\" class=\"ad-visible\">\n                    <span>\n                        <input\n                            name=\"ad\"\n                            type=\"checkbox\"\n                            id=\"sell\"\n                            value=\"\u041F\u0440\u043E\u0434\u0430\u0436\u0430\"\n                            class=\"ad-input\"\n                        >\n                        <label class=\"label-ad\" for=\"sell\">\u041F\u0440\u043E\u0434\u0430\u0436\u0430</label>\n                    </span>\n                    <span>\n                        <input\n                            name=\"ad\"\n                            type=\"checkbox\"\n                            id=\"auction\"\n                            value=\"\u0410\u0443\u043A\u0446\u0438\u043E\u043D\"\n                            class=\"ad-input\"\n                        >\n                        <label class=\"label-ad\" for=\"auction\">\u0410\u0443\u043A\u0446\u0438\u043E\u043D</label>\n                    </span>\n                    <span>\n                        <input\n                            name=\"ad\"\n                            type=\"checkbox\"\n                            id=\"Rental\"\n                            value=\"\u0410\u0440\u0435\u043D\u0434\u0430\"\n                            class=\"ad-input\"\n                        >\n                        <label class=\"label-ad\" for=\"Rental\">\u0410\u0440\u0435\u043D\u0434\u0430</label>\n                    </span>\n                    <button onclick=\"SourceFilter.isOpenedAdFilter()\" class=\"button-close-filter-option\" style=\"margin-left: 80px\">\n                </span>\n            ";
+            htmlPlaceUnderButton = "\n                <span id=\"adOpen\" class=\"ad-visible\">\n                    <span>\n                        <input\n                            name=\"ad\"\n                            type=\"checkbox\"\n                            id=\"sell\"\n                            value=\"\u041F\u0440\u043E\u0434\u0430\u0436\u0430\"\n                            class=\"ad-input\"\n                        >\n                        <label class=\"label-ad\" for=\"sell\">\u041F\u0440\u043E\u0434\u0430\u0436\u0430</label>\n                    </span>\n                    <span>\n                        <input\n                            name=\"ad\"\n                            type=\"checkbox\"\n                            id=\"auction\"\n                            value=\"\u0410\u0443\u043A\u0446\u0438\u043E\u043D\"\n                            class=\"ad-input\"\n                        >\n                        <label class=\"label-ad\" for=\"auction\">\u0410\u0443\u043A\u0446\u0438\u043E\u043D</label>\n                    </span>\n                    <button onclick=\"SourceFilter.isOpenedAdFilter()\" class=\"button-close-filter-option\" style=\"margin-left: 80px\">\n                </span>\n            ";
         }
         var placeForButton = document.getElementById("".concat(nameButton, "Open"));
         placeForButton.innerHTML = htmlPlaceUnderButton;
@@ -204,41 +268,7 @@ var CardsList = /** @class */ (function () {
     };
     return CardsList;
 }());
-var Car = /** @class */ (function () {
-    function Car(country, manufacturer, model, price, type, transmission, year, photo, ad) {
-        this.country = country;
-        this.manufacturer = manufacturer;
-        this.model = model;
-        this.price = price;
-        this.type = type;
-        this.transmission = transmission;
-        this.year = year;
-        this.photo = photo;
-        this.ad = ad;
-    }
-    return Car;
-}());
-var K7 = new Car("Южная Корея", "Kia", "K7", 2500016, "Легковой автомобиль", "Автомат", "2020", "./photos/K7.jpg", "Продажа");
-var Levorg = new Car("Япония", "Subaru", "Levorg", 1225015, "Легковой автомобиль", "Вариатор", "2019", "./photos/levorg.jpg", "Продажа");
-var AudiQ5 = new Car("Германия", "Audi", "Q5 45 TFSI", 2400000, "Внедорожник", "Роботизированная", "2019", "./photos/AudiQ5.jpg", "Продажа");
-var NissanSerena = new Car("Япония", "Nissan", "Serena", 1049658, "Минивэн", "Вариатор", "2009", "./photos/NissanSerena.jpg", "Аукцион");
-var UAZ3151 = new Car("Россия", "УАЗ", "3151", 300000, "Внедорожник", "Механическая", "2002", "./photos/UAZ3151.jpg", "Продажа");
-var OpelCOMBOAircoElctRamenStuurbediening = new Car("Нидерланды", "Opel", "Opel COMBO", 1500000, "Грузовик", "Механическая", "2015", "./photos/OpelCOMBO.png", "Продажа");
-var MercedesBenz250 = new Car("Нидерланды", "Mercedes-Benz", "Mercedes-Benz250", 4887000, "Грузовик", "Автомат", "2015", "./photos/Mercedes-Benz250.jpg", "Продажа");
-var NissanEcoT100 = new Car("Нидерланды", "Nissan", "EcoT100", 279000, "Грузовик", "Механическая", "2015", "./photos/NissanEcoT100.png", "Продажа");
-var CobusMercedesBenz = new Car("Нидерланд", "Mercedes Benz", "Cobus2700s", 3946500, "Грузовик", "Механическая", "2015", "./photos/CobusMercedesBenz.jpg", "Аукцион");
-var Setra317ULGT = new Car("Нидерланды", "MercedesBenz", "Cobus2700S", 2325200, "Грузовик", "Автомат", "2015", "./photos/Setra317UL-GT.jpg", "Аукцион");
-var KiaK72020 = new Car("Россия", "Kia", "K7", 2837000, "Легковой автомобиль", "Автомат", "2020", "./photos/KiaK7.jpg", "Продажа");
-var SuzukiJimny = new Car("Россия", "Suzuki", "Jimny", 1099000, "Легковой автомобиль", "Автомат", "2008", "./photos/SuzukiJimnyIII.jpg", "Аукцион");
-var KiaSpectra = new Car("Россия", "Kia", "Spectra I", 300000, "Легковой автомобиль", "Автомат", "2008", "./photos/KiaSpectra.jpg", "Продажа");
-var FordFocusII = new Car("Россия", "Ford", "Focus II", 535000, "Легковой автомобиль", "Механическая", "2008", "./photos/FordFocusII.jpg", "Аукцион");
-var Lada2114 = new Car("Россия", "Lada", "2114", 90000, "Легковой автомобиль", "Механическая", "2001", "./photos/Lada2114.jpg", "Продажа");
-var Uaz3151 = new Car("Россия", "UAZ", "3151", 275000, "Внедорожник", "Механическая", "1992", "./photos/3151.jpg", "Продажа");
-var LandRoverDiscovery = new Car("Россия", "Land Rover", "Discovery", 2699000, "Внедорожник", "Автомат", "2014", "./photos/LandRover.jpg", "Продажа");
-var RenaultRoverLogan = new Car("Россия", "Renault", "Logan I", 470000, "Легковой автомобиль", "Механическая", "2011", "./photos/RenaultLogan.jpg", "Аукцион");
-var VolvoXC60 = new Car("Россия", "Volvo", "XC60", 1260000, "Внедорожник", "Автомат", "2010", "./photos/VolvoXC60.jpg", "Продажа");
-var ChevroletAveo = new Car("Россия", "Chevrolet", "Aveo", 350000, "Легковой автомобиль", "Механическая", "2008", "./photos/ChevroletAveo.jpg", "Продажа");
-var arrayCars = [ChevroletAveo, VolvoXC60, RenaultRoverLogan, LandRoverDiscovery, Uaz3151, Lada2114, FordFocusII, KiaSpectra, SuzukiJimny, KiaK72020, Setra317ULGT, CobusMercedesBenz, NissanEcoT100, K7, Levorg, AudiQ5, NissanSerena, UAZ3151, OpelCOMBOAircoElctRamenStuurbediening, MercedesBenz250];
+// А тут заканчивается файл card_list
 var SourceFilter = new Filter();
 var SourceCards = new CardsList();
 var SourceFilterOptions = new SourceForFilterOption();
@@ -250,14 +280,7 @@ var arrayNameFilterButton = [
     "Коробка передач/Ход",
     "Тип объявления"
 ];
-var arrayNameLogicButton = [
-    "Price",
-    "Type",
-    "Manufacturer",
-    "Country",
-    "Transmission",
-    "Ad"
-];
+// Верхние константы тоже в файл constants
 var minPrice = SourceFilterOptions.minPrice(arrayCars);
 var maxPrice = SourceFilterOptions.maxPrice(arrayCars);
 var minPriceHeader = document.getElementById("minPriceHeader");
@@ -295,3 +318,5 @@ if (buttonTypeHeader) {
         SourceFilter.filterValues();
     });
 }
+// А тут заканчивается файл script
+// ¯\_(ツ)_/¯
