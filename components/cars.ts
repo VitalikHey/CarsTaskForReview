@@ -1,3 +1,6 @@
+const enum PossibleInputValues {
+  any = "Любой"
+}
 const enum Price {
   k7 = 2500016,
   Levorg = 1225015,
@@ -498,11 +501,11 @@ class Filter {
 
   public closeType(): void {
     const typeHeader: HTMLElement = document.getElementById("typeCarHeader");
-    typeHeader.textContent = "Любой";
+    typeHeader.textContent = PossibleInputValues.any;
 
     const typeInput: HTMLElement = document.getElementById("typeInput");
     if (typeInput instanceof HTMLInputElement) {
-      typeInput.value = "Любой";
+      typeInput.value = PossibleInputValues.any;
     }
   }
 
@@ -541,7 +544,7 @@ class Filter {
         minPriceValue = SourceFilterOptions.minPrice(arrayCars);
       }
 
-      if (!typeValue || typeValue === "Любой") {
+      if (!typeValue || typeValue === PossibleInputValues.any) {
         typeValue = "";
       }
 
