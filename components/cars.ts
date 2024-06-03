@@ -83,17 +83,17 @@ const enum Ad {
 }
 
 class Car {
-  country: Country;
-  manufacturer: Manufacturer;
-  model: Model;
-  price: Price;
-  type: TypeCar;
-  transmission: Transmission;
-  year: number | string;
-  photo: string;
-  ad: Ad;
+  public country: Country;
+  public manufacturer: Manufacturer;
+  public model: Model;
+  public price: Price;
+  public type: TypeCar;
+  public transmission: Transmission;
+  public year: number | string;
+  public photo: string;
+  public ad: Ad;
 
-  constructor(
+  public constructor(
     country: Country,
     manufacturer: Manufacturer,
     model: Model,
@@ -369,7 +369,7 @@ const arrayCars: Array<Car> = [
 // Пока что, типо тут заканчивается файл с константами
 
 class SourceForFilterOption {
-  minPrice(arrayCars: Array<Car>): number {
+  public minPrice(arrayCars: Array<Car>): number {
     let minPrice: Price = arrayCars[0].price;
     for (let index: number = 1; index < arrayCars.length; index++) {
       if (arrayCars[index].price < minPrice) {
@@ -379,7 +379,7 @@ class SourceForFilterOption {
     return minPrice;
   }
 
-  maxPrice(arrayCars: Array<Car>): number {
+  public maxPrice(arrayCars: Array<Car>): number {
     let maxPrice: Price = arrayCars[0].price;
     for (let index: number = 1; index < arrayCars.length; index++) {
       if (arrayCars[index].price > maxPrice) {
@@ -391,7 +391,7 @@ class SourceForFilterOption {
 }
 
 class Filter {
-  isOpenedPriceFilter(): void {
+  public isOpenedPriceFilter(): void {
     let openedPrice: HTMLElement = document.getElementById("priceOpen");
 
     if (openedPrice.classList.contains("price-hidden")) {
@@ -403,7 +403,7 @@ class Filter {
     }
   }
 
-  isOpenedTypeFilter(): void {
+  public isOpenedTypeFilter(): void {
     let openedType: HTMLElement = document.getElementById("typeOpen");
 
     if (openedType.classList.contains("type-hidden")) {
@@ -415,7 +415,7 @@ class Filter {
     }
   }
 
-  isOpenedCountryFilter(): void {
+  public isOpenedCountryFilter(): void {
     let openedCountry: HTMLElement = document.getElementById("countryOpen");
 
     if (openedCountry.classList.contains("country-hidden")) {
@@ -427,7 +427,7 @@ class Filter {
     }
   }
 
-  isOpenedTransmissionFilter(): void {
+  public isOpenedTransmissionFilter(): void {
     let openedTransmission: HTMLElement =
       document.getElementById("transmissionOpen");
 
@@ -440,7 +440,7 @@ class Filter {
     }
   }
 
-  isOpenedAdFilter(): void {
+  public isOpenedAdFilter(): void {
     let openedAd: HTMLElement = document.getElementById("adOpen");
 
     if (openedAd.classList.contains("ad-hidden")) {
@@ -452,7 +452,7 @@ class Filter {
     }
   }
 
-  isOpenManufacturerFilter(): void {
+  public isOpenManufacturerFilter(): void {
     let openedManufacturer: HTMLElement =
       document.getElementById("openManufacturer");
 
@@ -467,7 +467,7 @@ class Filter {
 
   // Метод filterLogic используем только при нажатии на кнопку ПРИМЕНИТЬ
 
-  closePrice(): void {
+  public closePrice(): void {
     const minPriceInput: HTMLElement = document.getElementById("minPriceValue");
     const maxPriceInput: HTMLElement = document.getElementById("maxPriceValue");
 
@@ -496,7 +496,7 @@ class Filter {
     }
   }
 
-  closeType(): void {
+  public closeType(): void {
     const typeHeader: HTMLElement = document.getElementById("typeCarHeader");
     typeHeader.textContent = "Любой";
 
@@ -506,7 +506,7 @@ class Filter {
     }
   }
 
-  filterValues(): void {
+  public filterValues(): void {
     const maxPriceInput: HTMLElement = document.getElementById("maxPriceValue");
     const minPriceInput: HTMLElement = document.getElementById("minPriceValue");
     const typeInput: HTMLElement = document.getElementById("typeInput");
@@ -583,7 +583,7 @@ class Filter {
 // А тут заканчивается файл filter
 
 class CardsList {
-  renderFilter(arrayNameFilterOption: Array<string>): void {
+  public renderFilter(arrayNameFilterOption: Array<string>): void {
     let htmListFilter: string = "";
 
     arrayNameFilterOption.map((nameButton): void => {
@@ -609,7 +609,7 @@ class CardsList {
     divFilter.innerHTML = htmListFilter;
   }
 
-  handleClickFilterButton(nameButton: string) {
+  public handleClickFilterButton(nameButton: string) {
     let htmlPlaceUnderButton: string = "";
 
     if (nameButton === arrayNameFilterButton[0]) {
@@ -869,10 +869,10 @@ class CardsList {
     placeForButton.innerHTML = htmlPlaceUnderButton;
   }
 
-  render(arrayCars: Array<Car>): void {
+  public render(arrayCars: Array<Car>): void {
     let htmlListCars: string = "";
 
-    arrayCars.forEach(({ country, model, price, type, year, photo }): void => {
+    arrayCars.map(({ country, model, price, type, year, photo }): void => {
       const priceCar: string = price.toLocaleString();
 
       htmlListCars += `
