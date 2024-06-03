@@ -523,7 +523,7 @@ class Filter {
     ) {
       let maxPriceValue: number = Number(maxPriceInput.value);
       let minPriceValue: number = Number(minPriceInput.value);
-      let typeValue: string = String(typeInput.value);
+      let typeValue: string = typeInput.value;
       let countryValue: string = countryInput.value;
 
       const manufactures: Array<string> = Array.from(
@@ -552,17 +552,25 @@ class Filter {
         countryValue = "";
       }
 
-      let filteredCars: Array<Car> = arrayCars.filter((car: Car) => {
-        return (
-          ((car.price <= maxPriceValue && car.price >= minPriceValue) ||
-            !(maxPriceValue + minPriceValue)) &&
-          (!typeValue || car.type === typeValue) &&
-          (!manufactures.length || manufactures.includes(car.manufacturer)) &&
-          (!countryValue || car.country === countryValue) &&
-          (!transmissions.length || transmissions.includes(car.transmission)) &&
-          (!ads.length || ads.includes(car.ad))
-        );
-      });
+      // let filteredCars: Array<Car> = arrayCars.filter((car: Car) => {
+      //   return (
+      //     ((car.price <= maxPriceValue && car.price >= minPriceValue) ||
+      //       !(maxPriceValue + minPriceValue)) &&
+      //     (!typeValue || car.type === typeValue) &&
+      //     (!manufactures.length || manufactures.includes(car.manufacturer)) &&
+      //     (!countryValue || car.country === countryValue) &&
+      //     (!transmissions.length || transmissions.includes(car.transmission)) &&
+      //     (!ads.length || ads.includes(car.ad))
+      //   );
+      // });
+
+      let filteredCars: Array<Car> = arrayCars
+          .filter((car) => car.price <= maxPriceValue && car.price >= minPriceValue)
+          .filter((car) => !typeValue || car.type === typeValue)
+          .filter((car) => !manufactures.length || manufactures.includes(car.manufacturer))
+          .filter((car) => !countryValue || car.country === countryValue)
+          .filter((car) => !transmissions.length || transmissions.includes(car.transmission))
+          .filter((car) => !ads.length || ads.includes(car.ad));
 
       const minPriceHeader: HTMLElement =
         document.getElementById("minPriceHeader");
