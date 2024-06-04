@@ -1,5 +1,5 @@
 const enum PossibleInputValues {
-  any = "Любой"
+  any = "Любой",
 }
 const enum Price {
   k7 = 2500016,
@@ -510,84 +510,76 @@ class Filter {
   }
 
   public filterValues(): void {
-    const maxPriceInput: HTMLElement = document.getElementById("maxPriceValue");
-    const minPriceInput: HTMLElement = document.getElementById("minPriceValue");
-    const typeInput: HTMLElement = document.getElementById("typeInput");
-    const countryInput: HTMLElement = document.getElementById("countryInput");
+    const maxPriceInput: HTMLInputElement =
+      document.querySelector<HTMLInputElement>("maxPriceValue");
+    const minPriceInput: HTMLInputElement =
+      document.querySelector<HTMLInputElement>("minPriceValue");
+    const typeInput: HTMLInputElement =
+      document.querySelector<HTMLInputElement>("typeInput");
+    const countryInput: HTMLInputElement =
+      document.querySelector<HTMLInputElement>("countryInput");
 
-    if (
-      maxPriceInput instanceof HTMLInputElement &&
-      minPriceInput instanceof HTMLInputElement &&
-      typeInput instanceof HTMLInputElement &&
-      countryInput instanceof HTMLInputElement
-    ) {
-      let maxPriceValue: number = Number(maxPriceInput.value);
-      let minPriceValue: number = Number(minPriceInput.value);
-      let typeValue: string = typeInput.value;
-      let countryValue: string = countryInput.value;
+    let maxPriceValue: number = Number(maxPriceInput.value);
+    let minPriceValue: number = Number(minPriceInput.value);
+    let typeValue: string = typeInput.value;
+    let countryValue: string = countryInput.value;
 
-      const manufactures: Array<string> = Array.from(
-        document.querySelectorAll('input[name="manufacture"]:checked'),
-      ).map((checkbox: HTMLInputElement) => checkbox.value);
-      const transmissions: Array<string> = Array.from(
-        document.querySelectorAll('input[name="transmission"]:checked'),
-      ).map((checkbox: HTMLInputElement) => checkbox.value);
-      const ads: Array<string> = Array.from(
-        document.querySelectorAll('input[name="ad"]:checked'),
-      ).map((checkbox: HTMLInputElement) => checkbox.value);
+    // const checkedInputs = document.querySelector<HTMLInputElement>('input[name="manufacture"]:checked').map((checkbox) => checkbox.value )
 
-      if (!maxPriceValue) {
-        maxPriceValue = SourceFilterOptions.maxPrice(arrayCars);
-      }
+    const manufactures: Array<string> = Array.from(
+      document.querySelectorAll('input[name="manufacture"]:checked'),
+    ).map((checkbox: HTMLInputElement) => checkbox.value);
+    const transmissions: Array<string> = Array.from(
+      document.querySelectorAll('input[name="transmission"]:checked'),
+    ).map((checkbox: HTMLInputElement) => checkbox.value);
+    const ads: Array<string> = Array.from(
+      document.querySelectorAll('input[name="ad"]:checked'),
+    ).map((checkbox: HTMLInputElement) => checkbox.value);
 
-      if (!minPriceValue) {
-        minPriceValue = SourceFilterOptions.minPrice(arrayCars);
-      }
-
-      if (!typeValue || typeValue === PossibleInputValues.any) {
-        typeValue = "";
-      }
-
-      if (!countryValue) {
-        countryValue = "";
-      }
-
-      // let filteredCars: Array<Car> = arrayCars.filter((car: Car) => {
-      //   return (
-      //     ((car.price <= maxPriceValue && car.price >= minPriceValue) ||
-      //       !(maxPriceValue + minPriceValue)) &&
-      //     (!typeValue || car.type === typeValue) &&
-      //     (!manufactures.length || manufactures.includes(car.manufacturer)) &&
-      //     (!countryValue || car.country === countryValue) &&
-      //     (!transmissions.length || transmissions.includes(car.transmission)) &&
-      //     (!ads.length || ads.includes(car.ad))
-      //   );
-      // });
-
-      let filteredCars: Array<Car> = arrayCars
-          .filter((car) => car.price <= maxPriceValue && car.price >= minPriceValue)
-          .filter((car) => !typeValue || car.type === typeValue)
-          .filter((car) => !manufactures.length || manufactures.includes(car.manufacturer))
-          .filter((car) => !countryValue || car.country === countryValue)
-          .filter((car) => !transmissions.length || transmissions.includes(car.transmission))
-          .filter((car) => !ads.length || ads.includes(car.ad));
-
-      const minPriceHeader: HTMLElement =
-        document.getElementById("minPriceHeader");
-      minPriceHeader.textContent = String(minPriceValue);
-
-      const maxPriceHeader: HTMLElement =
-        document.getElementById("maxPriceHeader");
-      maxPriceHeader.textContent = String(maxPriceValue);
-      document.getElementById("price").style.display = "inline";
-
-      const typeCarHeader: HTMLElement =
-        document.getElementById("typeCarHeader");
-      typeCarHeader.textContent = String(typeValue);
-      document.getElementById("type").style.display = "inline";
-
-      SourceCards.render(filteredCars);
+    if (!maxPriceValue) {
+      maxPriceValue = SourceFilterOptions.maxPrice(arrayCars);
     }
+
+    if (!minPriceValue) {
+      minPriceValue = SourceFilterOptions.minPrice(arrayCars);
+    }
+
+    if (!typeValue || typeValue === PossibleInputValues.any) {
+      typeValue = "";
+    }
+
+    if (!countryValue) {
+      countryValue = "";
+    }
+
+    let filteredCars: Array<Car> = arrayCars
+      .filter((car) => car.price <= maxPriceValue && car.price >= minPriceValue)
+      .filter((car) => !typeValue || car.type === typeValue)
+      .filter(
+        (car) =>
+          !manufactures.length || manufactures.includes(car.manufacturer),
+      )
+      .filter((car) => !countryValue || car.country === countryValue)
+      .filter(
+        (car) =>
+          !transmissions.length || transmissions.includes(car.transmission),
+      )
+      .filter((car) => !ads.length || ads.includes(car.ad));
+
+    const minPriceHeader: HTMLElement =
+      document.getElementById("minPriceHeader");
+    minPriceHeader.textContent = String(minPriceValue);
+
+    const maxPriceHeader: HTMLElement =
+      document.getElementById("maxPriceHeader");
+    maxPriceHeader.textContent = String(maxPriceValue);
+    document.getElementById("price").style.display = "inline";
+
+    const typeCarHeader: HTMLElement = document.getElementById("typeCarHeader");
+    typeCarHeader.textContent = String(typeValue);
+    document.getElementById("type").style.display = "inline";
+
+    SourceCards.render(filteredCars);
   }
 }
 
